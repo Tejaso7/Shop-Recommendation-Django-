@@ -26,4 +26,5 @@ This project is a Django application that provides restaurant recommendations ba
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/Tejaso7/Shop-Recommendation-Django-.git
-   cd restaurant-recommendations
+   cd Shop2home
+   
