@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Search Restaurants
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="text-center mb-4">Find Your Next Meal</h1>
+                
+                    <div class="form-group">
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 20px auto; padding: 20px; width: 80%; max-width: 600px; border:2px solid #8FEEFF ; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); background-color: #fff;">
+                        <h1>Search Food</h1>
+                        <form style="width: 100%; margin-bottom: 20px;" method="get" action="">
+                         <span style="width: 100%; padding: 10px; font-size: 16px; border-radius: 4px;">{{ form.as_p }}</span>
+                            <button type="submit" style="padding: 10px 20px; font-size: 16px; background-color: #007bff; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Search</button>
+                        </form>
+                        <!-- Additional content here, like search results or messages -->
+                    </div>
+                    
+                
+                <h2 class="mt-5">Results</h2>
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: center;">
+               
+                    {% for result, maps in results %}
+                    <div class="card" style="flex: 2 2 300px; margin: 10px; padding: 20px; background-color: #f0f0f0; width: 18rem;border:2px solid #8FEEFF " >
+                        <span style="border: 2px solid blue;" class="card-img-top" >
+                            {% if maps != "Unable to load map" %}
+                                <div class="map mt-3">{{ maps|safe }}</div>
+                            {% else %}
+                                <div>{{ maps }}</div>
+                            {% endif %}
+                        </span>
+                        <div class="card-body">
+                          <h5 class="card-title">{{ result.name }}</h5>
+                        <p class="card-text">
+                            <strong>Location:</strong> {{ result.location }} <br>
+                            <strong><summry> Menu Items: </summery></strong><details> {{x}} </details> <br>
+                            <strong>Coordinates:</strong> {{ result.lat_long }} 
+                        </p>
+                          <a href="#" class="btn btn-primary">Book Now</a>
+                        </div>
+                      </div>
+                         <hr>
+                    {% empty %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Hello User!</strong> You should check in some of another fields No results found ! 
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                    {% endfor %}
+                 
+            </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

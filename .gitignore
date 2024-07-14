@@ -1,0 +1,110 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.sqlite3
+*.db
+
+# Django migrations
+**/migrations/*
+
+# Database files
+*.db
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Environment directories
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.virtualenv/
+
+# Compiled static assets
+/static/
+
+# Local files
+local_settings.py
+
+# Test coverage reports
+htmlcov/
+.tox/
+.coverage
+coverage.xml
+*.cover
+.hypothesis/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Sphinx documentation
+docs/_build/
+
+# pyenv
+.python-version
+
+# Celery beat schedule file
+celerybeat-schedule
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# MySQL
+*.sql
+*.mysql
+
+# Visual Studio Code
+.history
+.vscode
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Pyre type checker
+.pyre/
+
+# Backup files
+*.bak
+*.swp
+*.tmp

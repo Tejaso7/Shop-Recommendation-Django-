@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron" style="border:2px solid #8FEEFF ; border-radius:25px;">
+        <h1 class="display-4">Welcome to Our Restaurant Finder</h1>
+        <p class="lead">Discover the best places to eat, based on ratings and reviews.</p>
+        <hr class="my-4">
+        <p>Use the navigation bar to explore different pages, such as the search page for finding restaurants by your preferences.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'search' %}" role="button">Find Restaurants</a>
+    </div>
+
+    <div class="row" style=" padding:20px ">
+        <div class="col-md-4" style="border:2px solid #8FEEFF ; border-radius:25px;padding:10px">
+            <h2>Top Rated</h2>
+            <p>Discover the highest-rated restaurants in your area. These top-tier eateries are sure to provide an exceptional dining experience.</p>
+        </div>
+        <div class="col-md-4" style="border:2px solid #8FEEFF ; border-radius:25px;padding:10px">
+            <h2>Best Value</h2>
+            <p>Find restaurants that offer the best value for money. Enjoy great food without breaking the bank.</p>
+        </div>
+        <div class="col-md-4" style="border:2px solid #8FEEFF ; border-radius:25px;padding:10px">
+            <h2>New Arrivals</h2>
+            <p>Check out the newest additions to the restaurant scene. Be the first to try out these exciting new places.</p>
+        </div>
+    </div>
+{% endblock %}
