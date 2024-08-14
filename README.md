@@ -1,5 +1,8 @@
 # Restaurant Recommendations Django Project
 
+<img src="shop2home/imgdemo/Screenshot 2024-07-14 143032.png">
+<br>
+<img src ="shop2home/imgdemo/Screenshot 2024-07-14 143221.png">
 ## Overview
 This project is a Django application that provides restaurant recommendations based on specific food items. Users can search for restaurants that offer their desired dishes, view restaurant details, and see the locations on a map. The application features a responsive design using Bootstrap 5 and supports CSV data uploads for easy database population.
 
